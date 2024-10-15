@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Main game container */
+.game-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-image: url(images/background/table_top.png);
+    background-size: cover;
+    padding: 20px;
+}
+
+/* Dealer and Player sections */
+.dealer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 620px;
+    right: 940px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 138px;
+    left: 415px;
+}
+
+.player-cards {
+    position: absolute;
+    display: flex;
+    bottom: 50px;
+    left: 15px;
+}
+
+.dealer-cards {
+    position: absolute;
+    display: flex;
+    top: 50px;
+}
