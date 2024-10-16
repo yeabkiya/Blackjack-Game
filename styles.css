@@ -75,3 +75,31 @@ button {
 button:hover {
     background-color:purple;
 }
+
+@keyframes deal-card {
+    from {
+        transform: translateX(0);
+    } 
+    to {
+        transform: translateX(100px);
+    }   
+}
+.dealer-cards img {
+    animation: deal-card 1s ease-in-out;
+}
+.player-cards img {
+    animation: deal-card 1s ease-in-out;
+}
+
+.chips img {
+    animation: move-up 1s ease-in-out;
+}
+
+@keyframes move-up {
+    from {
+        transform: translateY(0); /* Start from the original position */
+    }
+    to {
+        transform: translateY(-50px); /* Move 50px upwards */
+    }
+}
