@@ -186,7 +186,7 @@ button:hover {
     background-color: red;
     top: -10px; 
     border-radius: 50%;
-    animation: fall 5s ease-in infinite;
+    animation: fall 2s ease-in infinite;
     animation-delay: 3s;
 }
 
