@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 580px;
+    bottom: 620px;
     right: 940px;
 }
 
@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 100px;
+    bottom: 135px;
     left: 415px;
 }
 
@@ -59,7 +59,7 @@
     margin: 5px;
 }
 .controls {
-    margin-top: 665px;
+    margin-top: 635px;
     margin-left: 400px;
     justify-content: center;
     display: flex;   
@@ -114,7 +114,7 @@ button:hover {
     width: 50px;
     height: 50px;
     margin: 0; 
-    bottom: 50px;
+    bottom: 10px;
 }
 
 /* Tooltip style */
@@ -127,7 +127,7 @@ button:hover {
     padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: 120%; 
+    bottom: 130px; 
     left: 50%;
     transform: translateX(-50%);
     width: 100px; 
@@ -140,4 +140,85 @@ button:hover {
 .chip-container:hover .tooltip {
     visibility: visible;
     opacity: 1;
+}
+
+/* Confetti container covers the whole screen */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+/* Styling for the You Won message */
+.you-won {
+    position: absolute;
+    top: -100px; 
+    left: 50%;
+    transform: translateX(-33%);
+    font-size: 60px;
+    color: gold;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+    opacity: 0; 
+    animation: slide-down 2s ease-in-out forwards;
+    animation-delay: 3s; 
+}
+
+/* Slide-down animation for You Won message */
+@keyframes slide-down {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+    100% {
+        top: 340px; 
+        opacity: 1;
+    }
+}
+/* Individual confetti pieces */
+.confetti {
+    position: absolute;
+    width: 8px; 
+    height: 8px;
+    background-color: red;
+    top: -10px; 
+    border-radius: 50%;
+    animation: fall 5s ease-in infinite;
+    animation-delay: 3s;
+}
+
+/* Random positions for the confetti */
+.confetti:nth-child(1) { left: 5%; }
+.confetti:nth-child(2) { left: 10%; }
+.confetti:nth-child(3) { left: 15%; }
+.confetti:nth-child(4) { left: 20%; }
+.confetti:nth-child(5) { left: 25%; }
+.confetti:nth-child(6) { left: 30%; }
+.confetti:nth-child(7) { left: 35%; }
+.confetti:nth-child(8) { left: 40%; }
+.confetti:nth-child(9) { left: 45%; }
+.confetti:nth-child(10) { left: 50%; }
+.confetti:nth-child(11) { left: 55%; }
+.confetti:nth-child(12) { left: 60%; }
+.confetti:nth-child(13) { left: 65%; }
+.confetti:nth-child(14) { left: 70%; }
+.confetti:nth-child(15) { left: 75%; }
+.confetti:nth-child(16) { left: 80%; }
+.confetti:nth-child(17) { left: 85%; }
+.confetti:nth-child(18) { left: 90%; }
+.confetti:nth-child(18) { left: 100%; }
+
+/* Confetti falling animation */
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
 }
