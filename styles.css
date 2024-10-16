@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 620px;
+    bottom: 580px;
     right: 940px;
 }
 
@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 138px;
+    bottom: 100px;
     left: 415px;
 }
 
@@ -59,7 +59,7 @@
     margin: 5px;
 }
 .controls {
-    margin-top: 550px;
+    margin-top: 665px;
     margin-left: 400px;
     justify-content: center;
     display: flex;   
@@ -102,4 +102,42 @@ button:hover {
     to {
         transform: translateY(-50px); /* Move 50px upwards */
     }
+}
+
+.chip-container {
+    position: relative; 
+    display: inline-block;
+    margin: 10px;
+}
+
+.chip {
+    width: 50px;
+    height: 50px;
+    margin: 0; 
+    bottom: 50px;
+}
+
+/* Tooltip style */
+.tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 12px; 
+}
+
+/* Show the tooltip on hover */
+.chip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }
